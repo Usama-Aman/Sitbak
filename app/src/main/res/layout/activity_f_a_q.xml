@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.home.faq.FAQVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background">
+
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/topbar_layout" />
+
+        <View
+            android:id="@+id/viewTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:background="@color/green_50a"
+            app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/pullToRefresh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewTop">
+
+
+            <ExpandableListView
+                android:id="@+id/expandableList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:childDivider="@null"
+                android:clipToPadding="false"
+                android:divider="@color/green_50a"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemSearchResult"
+        android:background="@color/app_background"
+        app:layout_constraintTop_toBottomOf="@id/etShopSearch">
+
+
+        <ImageView
+            android:id="@+id/ivShop"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/delta9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvShopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="DeltaNine Store"
+            android:textColor="@color/lunar_green"
+            android:textFontWeight="400"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivShop"
+            app:layout_constraintLeft_toRightOf="@id/ivShop"
+            app:layout_constraintTop_toTopOf="@id/ivShop" />
+
+
+        <TextView
+            android:id="@+id/tvShopItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="42 items"
+            android:textColor="@color/bottom_bar_unselected"
+            android:textFontWeight="400"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/ivShop"
+            app:layout_constraintTop_toBottomOf="@id/tvShopName" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/green_50a"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

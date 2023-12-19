@@ -1,0 +1,159 @@
+<resources>
+    <string name="stripe_test_key">pk_test_51IvHJPHEeK5VsV5GBBBHQNVhWvnlJXRfCGMUz1RM7yxuwf71lx4uFozHZ6twS4F5dSyG86Swi0eC9070dEFMN5t800Sk5OJQnp</string>
+    <string name="google_places_key">AIzaSyBhMoC9OLQs1fxPJkPWxdgC9dui6pIKQoA</string>
+
+    <string name="app_name">SitBak</string>
+
+    <string name="fast_delivery_for_you">FAST DELIVERY FOR YOU</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="current_location_title">Location</string>
+    <string name="order_screen_title">Order</string>
+    <string name="shop_screen_title">Store Catalog</string>
+    <string name="news_screen_title">News &amp; Info</string>
+    <string name="news_detail_screen_title">News &amp; Info</string>
+    <string name="privacy_screen_title">Privacy Policy</string>
+    <string name="terms_screen_title">Terms of service</string>
+    <string name="maps_screen_title">Your Location</string>
+    <string name="referral_code_screen_title">Your bonus</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="login">Login</string>
+    <string name="continue_as_guest">Continue as a Guest</string>
+    <string name="create_account">Create Account</string>
+    <string name="forgot_password">Forget password</string>
+    <string name="start">Start</string>
+    <string name="enter_and_confirm_your_phone_number_to_create_an_account_we_will_send_you_a_text_with_a_verification_code">Enter and confirm your phone number to create an account. We will send you a text with a verification code</string>
+    <string name="send_code">Send code</string>
+    <string name="change_phone">Change Phone</string>
+
+    <!--Bottom bar-->
+    <string name="bottom_bar_order">Order</string>
+    <string name="bottom_bar_shops">Shops</string>
+    <string name="bottom_bar_news">News</string>
+    <string name="bottom_bar_profile">Profile</string>
+
+
+    <string name="your_driver_s_license_is_up_to_date_take_photo_in_a_well_lit_flat_surface_take_photo_of_front_and_back_of_driver_s_license">Your driver’s license is up-to-date\nTake photo in a well-lit flat surface \nTake photo of front and back of driver’s license</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_curabitur_faucibus_tellus_sed_venenatis_mollis_nullam_quis_felis_tortor_nam_tincidunt_mi_non_nisl_blandit_nec_fringilla_est_vulputate_donec_et_scelerisque_metus_suspendisse_ultricies_eget_lorem_quis_vulputate_nunc_consequat_libero_vel_porta_imperdiet_phasellus_interdum_rutrum_ipsum_non_condimentum_nam_convallis_mauris_a_sagittis_fringilla_nunc_quam_tempor_augue_et_porttitor_felis_diam_aliquam_mi_nunc_blandit_eu_pharetra_ac_pretium_ac_odio_vivamus_pellentesque_dapibus_massa_vel_semper_vivamus_sed_nulla_suscipit_condimentum_urna_nec_ultricies_leo_nullam_vestibulum_ullamcorper_justo_quis_tincidunt_nibh_tincidunt_non_etiam_eget_orci_in_mauris_tempor_dignissim">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur faucibus tellus sed venenatis mollis. Nullam quis felis tortor. Nam tincidunt mi non nisl blandit, nec fringilla est vulputate.\n\nDonec et scelerisque metus. Suspendisse ultricies eget lorem quis vulputate. Nunc consequat libero vel porta imperdiet. Phasellus interdum rutrum ipsum non condimentum. Nam convallis, mauris a sagittis fringilla, nunc quam tempor augue, et porttitor felis diam.\n\nAliquam mi nunc, blandit eu pharetra ac, pretium ac odio. Vivamus pellentesque dapibus massa vel semper. Vivamus sed nulla suscipit, condimentum urna nec, ultricies leo. Nullam vestibulum ullamcorper justo, quis tincidunt nibh tincidunt non. Etiam eget orci in mauris tempor dignissim.</string>
+
+    <string name="to_find_the_best_suppliers_give_us_access_to_your_location">To find the best suppliers, give us access to your location</string>
+
+    <string name="current_location">Current location</string>
+
+    <string name="or_indicate_your_location">Or indicate your location</string>
+    <string name="indicate_your_location">Indicate your location</string>
+    <string name="start_shopping">Start Shopping</string>
+    <string name="save_location">Save Location</string>
+    <string name="add_new_location">Add new location</string>
+
+    <!--Active Order-->
+    <string name="active_order_btn_start_location">Current Location</string>
+    <string name="active_order_btn_start_shopping">Start Shopping</string>
+    <string name="active_order_tv_text1">Many interesting things in our store!</string>
+    <string name="active_order_tv_text2">There are many stores in our catalog, and an incredible number of goods loren ipsum text about store</string>
+    <string name="active_order_tv_text3">879 shops nearby, 3759 types of products in the catalog, Nearest delivery within 27 min.</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="guest_users_can_only_browse_the_catalog_to_make_orders_you_must_create_an_account_or_log_in">Guest users can only browse the catalog. To make orders, you must Create an Account or Log In</string>
+    <string name="profile">Profile</string>
+    <string name="free_shipping_subscription_delivery_from_any_store_in_your_area">Free shipping subscription –\ndelivery from any store in your area</string>
+    <string name="we_will_miss_you_maybe_you_should_just_log_out">We will miss you.\n Maybe you should just log out?</string>
+    <string name="logout">Log Out</string>
+    <string name="cancel">Cancel</string>
+    <string name="search_results_stores">Search results in stores</string>
+    <string name="time_of_delivery">Time of delivery</string>
+    <string name="sort_by">Sort by</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="rating">Rating</string>
+    <string name="your_bonus">Your Bonus</string>
+    <string name="bonus_will_be_added_as_a_discount_to_your_next_order">Bonus will be added as a discount to your next order</string>
+    <string name="discount_invitation">Discount Invitation</string>
+    <string name="code_share_the_code_with_your_friend_after_he_signs_up_and_makes_the_first_purchase_both_of_you_will_receive_a_bonus">Code Share the code with your friend, after he signs up and makes the first purchase, both of you will receive a bonus</string>
+    <string name="enter_verification_code">Enter verification code</string>
+    <string name="ok">OK</string>
+    <string name="location_history">Location History</string>
+    <string name="default_location">Default location</string>
+    <string name="delete_location">Delete location</string>
+    <string name="set_as_default">Set as default</string>
+    <string name="current_password">CURRENT PASSWORD</string>
+    <string name="repeat_new_password">REPEAT NEW PASSWORD</string>
+    <string name="new_password">NEW PASSWORD</string>
+    <string name="change_password">Change password</string>
+    <string name="change_email">Change email</string>
+    <string name="login_info_screen_title">Login info</string>
+    <string name="payment_methods_screen_title">Payment methods</string>
+    <string name="add_new_card">Add New Card</string>
+    <string name="add">Add</string>
+    <string name="are_you_sure_you_want_to_delete_card">Are you sure you want to delete this card?</string>
+    <string name="are_you_sure_you_want_to_delete_account">Are you sure you want to \n delete your account?</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want \n to log out??</string>
+    <string name="delete_logout_account_description">You may not be able to enjoy all the benefits of the service. \n All your data will be deleted.</string>
+    <string name="delete_logout">We will miss you. \n Maybe you should just \n log out?</string>
+    <string name="straingType">Straing type</string>
+    <string name="storeCategories">Store Categories</string>
+    <string name="order_again">Order Again</string>
+    <string name="details">Details</string>
+    <string name="sitbak_support_chat">SitBak Support Chat</string>
+    <string name="search">Search</string>
+    <string name="login_by_face_id">Login by Face ID</string>
+    <string name="share_code">Share code</string>
+    <string name="send">Send</string>
+    <string name="recover_by_phone">Recover by phone</string>
+    <string name="delete">Delete</string>
+    <string name="toast_success">Success</string>
+    <string name="toast_error">Error</string>
+    <string name="faq_screen_title">FAQs</string>
+    <string name="no_internet_connection">Please check your internet connection</string>
+    <string name="sign_up_with_email">Sign Up with email</string>
+    <string name="verification_code_screen_title">Enter verification code</string>
+    <string name="add_your_photo_screen_title">Add your photo</string>
+    <string name="location_list_screen_title">Locations list </string>
+    <string name="reset_password">Reset password</string>
+    <string name="recover_by_email_screen_title">Recovery by Email</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="recover_by_phone_screen_title">Recovery by phone</string>
+    <string name="no_data_found">No data found.</string>
+    <string name="all_stores_count">All stores (%s)</string>
+    <string name="past_order_item_charges">%s items, for $%s</string>
+    <string name="search_result_subtitle">\" from \'%s\'\"</string>
+    <string name="store_rating_by_users">Store rating %s</string>
+    <string name="your_bonus_profile">Your bonus $%s</string>
+    <string name="user_bonus">$96.10</string>
+    <string name="card_number_invalid">Card number is invalid.</string>
+    <string name="card_number_required">Card number is required.</string>
+    <string name="card_expiry_invalid">Card expiry date is invalid.</string>
+    <string name="card_expiry_required">Card expiry date is required.</string>
+    <string name="card_cvv_invalid">Card cvv is invalid.</string>
+    <string name="card_cvv_required">Card cvv is required.</string>
+    <string name="card_name_required">Name is required.</string>
+    <string name="card_surname_required">Surname is required.</string>
+    <string name="card_invalid">Card details are invalid.</string>
+    <string name="payment_card_number">**** **** **** %s</string>
+    <string name="choose_card_pay">Choose %s Pay</string>
+    <string name="make_it_default_card">Make it default card</string>
+    <string name="no_shop_found">No Shop Found</string>
+    <string name="no_product_found">No Product Found</string>
+    <string name="no_location_history">No Location History</string>
+    <string name="no_result_found">No Result Found</string>
+    <string name="no_messages_found">No Messages \nTry sending one</string>
+    <string name="no_news_found">No News Found</string>
+    <string name="no_order_found">No Order Found</string>
+
+
+    <string name="delivery_status_pending">Being prepared</string>
+    <string name="delivery_status_arrived_store">Driver arrived to store</string>
+    <string name="delivery_status_accepted">Driver picked up your order</string>
+    <string name="delivery_status_ongoing">Courier on the way with order</string>
+    <string name="delivery_status_arrived">Courier has arrived with order</string>
+    <string name="delivery_status_cancelled_by_driver">Driver cancelled your order</string>
+    <string name="delivery_status_cancelled">Cancelled</string>
+    <string name="delivery_status_cancelled_by_shop">Shop admin cancelled your order</string>
+    <string name="gps_network_not_enabled">"Please enable GPS "</string>
+    <string name="open_location_settings">Open settings</string>
+    <string name="Cancel">Cancel</string>
+    <string name="change_location">Change location</string>
+    <string name="no_notifications_found">No Notifications Found</string>
+
+</resources>

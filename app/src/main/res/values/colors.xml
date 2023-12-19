@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="bottom_bar_selected">#076A04</color>
+    <color name="bottom_bar_unselected">#A1A9A1</color>
+    <color name="app_background">#F0F2F0</color>
+    <color name="app_color">#076A04</color>
+    <color name="text_light_black">#373937</color>
+    <color name="light_grey">#DAE1DA</color>
+    <color name="toolbar_title">#373937</color>
+
+    <color name="delivery_status_pending">#4CC348</color>
+    <color name="delivery_status_arrived_store">#5F88F2</color>
+    <color name="delivery_status_accepted">#FFA217</color>
+    <color name="delivery_status_ongoing">#9E3EFF</color>
+
+    <color name="gradient_green">#B9FD8E</color>
+    <color name="gradient_light_green">#E9FAB8</color>
+    <color name="lighter_grey">#788578</color>
+    <color name="active_order_location_color">#CDD1CD</color>
+    <color name="switch_color">#087105</color>
+    <color name="load_more_item">#C2C7C2</color>
+
+
+
+    <color name="green_900">#076A04</color>
+    <color name="green_900_off_54">#8A076A04</color>
+    <color name="green_900_off_27">#8A076A04</color>
+    <color name="green_50">#E9EDE9</color>
+    <color name="green_100">#C9CFC9</color>
+    <color name="tasman">#CDD1CD</color>
+    <color name="lunar_green">#373937</color>
+    <color name="green_200">#A1A9A1</color>
+    <color name="gray_nurse">#F0F2F0</color>
+    <color name="tasman_2">#DAE1DA</color>
+    <color name="green_50a">#E2E9E2</color>
+    <color name="text_color">#373937</color>
+    <color name="yellow_a100">#F1FF98</color>
+    <color name="san_felix">#074D01</color>
+
+
+</resources>

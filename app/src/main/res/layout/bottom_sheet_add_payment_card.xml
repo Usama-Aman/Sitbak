@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:id="@+id/v1"
+            android:layout_width="32dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_bottom_sheet_bar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddNewCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/add_new_card"
+            android:textAlignment="center"
+            android:textColor="@color/text_light_black"
+            android:textFontWeight="500"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/v1" />
+
+        <TextView
+            android:id="@+id/tvCardError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="CARD NUMBER"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textFontWeight="400"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAddNewCard" />
+
+        <TextView
+            android:id="@+id/tvCardNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="CARD NUMBER"
+            android:textColor="@color/green_200"
+            android:textFontWeight="400"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCardError" />
+
+        <EditText
+            android:id="@+id/etCardNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_edit_text_main"
+            android:inputType="number"
+            android:maxLines="1"
+            android:minLines="1"
+            android:nextFocusDown="@id/etCardDate"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCardNumber" />
+
+        <TextView
+            android:id="@+id/tvCardDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="7.5dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="DATE"
+            android:textColor="@color/green_200"
+            android:textFontWeight="400"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tvCardCVV"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber" />
+
+        <EditText
+            android:id="@+id/etCardDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="7.5dp"
+            android:background="@drawable/bg_edit_text_main"
+            android:inputType="number"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:minLines="1"
+            android:nextFocusDown="@id/etCardCVV"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/etCardCVV"
+            app:layout_constraintTop_toBottomOf="@id/tvCardDate" />
+
+        <TextView
+            android:id="@+id/tvCardCVV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7.5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="CVV"
+            android:textColor="@color/green_200"
+            android:textFontWeight="400"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toRightOf="@id/tvCardDate"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCardNumber" />
+
+        <EditText
+            android:id="@+id/etCardCVV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_edit_text_main"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:minLines="1"
+            android:nextFocusDown="@id/etCardHolderName"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toRightOf="@id/etCardDate"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCardCVV" />
+
+        <TextView
+            android:id="@+id/tvCardHolderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="7.5dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="NAME"
+            android:textColor="@color/green_200"
+            android:textFontWeight="400"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tvCardHolderSurname"
+            app:layout_constraintTop_toBottomOf="@id/etCardDate" />
+
+        <EditText
+            android:id="@+id/etCardHolderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="7.5dp"
+            android:background="@drawable/bg_edit_text_main"
+            android:inputType="text"
+            android:maxLines="1"
+            android:minLines="1"
+            android:nextFocusDown="@id/etCardHolderSurname"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/etCardHolderSurname"
+            app:layout_constraintTop_toBottomOf="@id/tvCardHolderName" />
+
+        <TextView
+            android:id="@+id/tvCardHolderSurname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7.5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="SURNAME"
+            android:textColor="@color/green_200"
+            android:textFontWeight="400"
+            android:textSize="11sp"
+            app:layout_constraintLeft_toRightOf="@id/tvCardHolderName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCardCVV" />
+
+        <EditText
+            android:id="@+id/etCardHolderSurname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/bg_edit_text_main"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="15dp"
+            android:textColor="@color/text_light_black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toRightOf="@id/etCardHolderName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCardHolderSurname" />
+
+        <LinearLayout
+            android:id="@+id/llAddNewCard"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_btn_main"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCardHolderName">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:paddingVertical="11dp"
+                android:text="@string/add"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/bg_tv_main"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llAddNewCard">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:paddingVertical="11dp"
+                android:text="@string/cancel"
+                android:textColor="@color/green_900"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

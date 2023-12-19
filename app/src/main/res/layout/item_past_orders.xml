@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivStar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_star_filled"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvShopImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivShopImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/delta9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvShopName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/lunar_green"
+                android:textFontWeight="400"
+                android:textSize="19sp"
+                app:layout_constraintLeft_toRightOf="@id/cvShopImage"
+                app:layout_constraintRight_toLeftOf="@id/ivStar"
+                app:layout_constraintTop_toTopOf="@id/cvShopImage" />
+
+            <TextView
+                android:id="@+id/tvItemDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/lunar_green"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/cvShopImage"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvShopName" />
+
+            <TextView
+                android:id="@+id/tvDateHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Date"
+                android:textColor="@color/green_200"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvShopImage" />
+
+            <TextView
+                android:id="@+id/tvDateDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/lunar_green"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/cvShopImage"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDateHeading" />
+
+            <TextView
+                android:id="@+id/tvDeliveryHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Delivery"
+                android:textColor="@color/green_200"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDateHeading" />
+
+            <TextView
+                android:id="@+id/tvDeliveryDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_regular"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="@color/lunar_green"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/cvShopImage"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDeliveryHeading" />
+
+            <LinearLayout
+                android:id="@+id/llDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/bg_tv_main"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/llOrderAgain"
+                app:layout_constraintTop_toBottomOf="@id/tvDeliveryHeading">
+
+                <TextView
+                    android:id="@+id/btnDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingVertical="11dp"
+                    android:text="@string/details"
+                    android:textColor="@color/green_900"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOrderAgain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_btn_main"
+                app:layout_constraintLeft_toRightOf="@id/llDetails"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/llDetails">
+
+                <TextView
+                    android:id="@+id/btnOrderAgain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingVertical="11dp"
+                    android:text="@string/order_again"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

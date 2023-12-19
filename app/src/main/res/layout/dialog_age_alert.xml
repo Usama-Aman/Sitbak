@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_18sdp"
+        app:cardBackgroundColor="@color/gray_nurse"
+        app:cardCornerRadius="16sp"
+        app:cardElevation="0dp"
+        tools:context=".home.popups.AgeAlertPopup">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center_horizontal"
+                android:text="Please confirm you're 19+ to access this site"
+                android:textColor="@color/lunar_green"
+                android:textFontWeight="500"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="your date of birth"
+                android:textAllCaps="true"
+                android:textColor="@color/green_200"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/bg_edit_text_main"
+                android:maxLines="1"
+                android:paddingVertical="@dimen/_12sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:textColor="@color/lunar_green"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/tvEmail"
+                tools:ignore="RtlSymmetry" />
+
+            <LinearLayout
+                android:id="@+id/llCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_53sdp"
+                android:background="@drawable/bg_tv_main"
+                app:layout_constraintBottom_toTopOf="@id/llRecoverByEmail">
+
+                <TextView
+                    android:id="@+id/btnCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:text="Cancel"
+                    android:textColor="@color/green_900"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_18sdp"
+                android:background="@drawable/bg_tv_main_unselected"
+                app:layout_constraintTop_toBottomOf="@id/tvMain">
+
+                <TextView
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:enabled="false"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:text="Confirm"
+                    android:textColor="@color/green_100"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.auth.recover_phone.RecoverByPhoneVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"
+        android:background="@color/gray_nurse"
+        tools:context=".auth.recover_phone.RecoverByPhoneActivity">
+        <include
+            android:id="@+id/topBarLayout"
+            layout="@layout/topbar_layout" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:lineHeight="@dimen/_18sdp"
+            android:id="@+id/tvDescription"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            app:layout_constraintTop_toBottomOf="@id/topBarLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Enter the phone number provided during registration"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/lunar_green"
+            tools:targetApi="p"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/tvEnterPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:text="ENTER PHONE"
+            android:textColor="@color/green_200"
+            android:textSize="@dimen/_9ssp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            android:layout_marginTop="@dimen/_11sdp"/>
+        <LinearLayout
+            android:id="@+id/llCountryCodePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/bg_edit_text_main"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvEnterPhone"
+            tools:ignore="RtlSymmetry">
+
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryCodePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_defaultNameCode="US"
+                app:ccp_showArrow="false"
+                app:ccp_showFlag="false"
+                app:ccp_autoFormatNumber="true"
+                app:ccp_contentColor="@color/tasman_2"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/inter_regular"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/lunar_green"
+                android:textSize="@dimen/_16ssp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_19sdp"
+            android:background="@drawable/bg_btn_main"
+            app:layout_constraintBottom_toTopOf="@id/llRecoverByEmail">
+
+            <TextView
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Send"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llRecoverByEmail"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_42sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_btn_dim"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/btnRecoverByEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Recover by email"
+                android:textColor="@color/green_100"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.home.news.NewsFragmentVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/topBarLayout"
+            layout="@layout/topbar_layout" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBarLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/pullToRefresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivNewHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/new_header"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="25.2.2021"
+                            android:textColor="@color/text_light_black"
+                            android:textSize="11sp"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/tvNewsHeadline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:minLines="2"
+                            android:text="Main news headline condime, metus no gravida suscipit"
+                            android:textAlignment="center"
+                            android:textColor="@color/text_light_black"
+                            android:textFontWeight="500"
+                            android:textSize="23sp"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+
+                        <TextView
+                            android:id="@+id/btnStartShopping"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/gradient_active_orders_buttons"
+                            android:foreground="?android:selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_12sdp"
+                            android:text="@string/active_order_btn_start_shopping"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="@id/ivNewHeader"
+                            app:layout_constraintTop_toBottomOf="@id/ivNewHeader" />
+
+                        <TextView
+                            android:id="@+id/tvRecentStories"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="Recent Stories"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textFontWeight="500"
+                            android:textSize="17sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/btnStartShopping" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/newsRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginTop="6dp"
+                            android:clipToPadding="false"
+                            android:nestedScrollingEnabled="false"
+                            android:paddingBottom="6dp"
+                            app:layout_constraintTop_toBottomOf="@id/tvRecentStories" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/llNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/ic_no_news_found" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_regular"
+                android:lineHeight="15.54dp"
+                android:text="@string/no_news_found"
+                android:textColor="@color/bottom_bar_unselected"
+                android:textFontWeight="500"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/topBarLayout" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

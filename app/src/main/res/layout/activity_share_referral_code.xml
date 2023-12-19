@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background">
+
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/topbar_layout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/yourBonusConstraint"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/drawable_your_bonus"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/your_bonus"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_light_black"
+                    android:textFontWeight="400"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:id="@+id/tvYourBonus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/user_bonus"
+                    android:textAlignment="center"
+                    android:textColor="@color/text_light_black"
+                    android:textFontWeight="400"
+                    android:textSize="27sp" />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tvBonusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/gradient_your_bonus_text"
+            android:fontFamily="@font/inter_regular"
+            android:paddingHorizontal="75dp"
+            android:paddingVertical="10dp"
+            android:text="@string/bonus_will_be_added_as_a_discount_to_your_next_order"
+            android:textAlignment="center"
+            android:textColor="@color/bottom_bar_unselected"
+            android:textFontWeight="400"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/yourBonusConstraint" />
+
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/discount_invitation"
+            android:textAlignment="center"
+            android:textColor="@color/text_light_black"
+            android:textFontWeight="400"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/tvBonusText" />
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/inter_regular"
+            android:lineHeight="25.5dp"
+            android:text="@string/code_share_the_code_with_your_friend_after_he_signs_up_and_makes_the_first_purchase_both_of_you_will_receive_a_bonus"
+            android:textAlignment="center"
+            android:textColor="@color/text_light_black"
+            android:textFontWeight="400"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/t2" />
+
+        <TextView
+            android:id="@+id/tvReferralCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter_regular"
+            android:lineHeight="32.68dp"
+            android:text="RR780Z"
+            android:textAlignment="center"
+            android:textColor="@color/text_light_black"
+            android:textFontWeight="400"
+            android:textSize="27sp"
+            app:layout_constraintTop_toBottomOf="@id/t3" />
+
+        <TextView
+            android:id="@+id/btnShareCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_btn_main"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_12sdp"
+            android:text="@string/share_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minHeight="300dp"
+        android:paddingBottom="@dimen/_18sdp"
+        app:cardBackgroundColor="@color/app_background"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/etShopSearch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:imeOptions="actionSearch"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/text_light_black"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/searchCross"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:clickable="false"
+                android:focusable="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_cross_grey"
+                app:layout_constraintBottom_toBottomOf="@id/etShopSearch"
+                app:layout_constraintRight_toRightOf="@id/etShopSearch"
+                app:layout_constraintTop_toTopOf="@id/etShopSearch" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shopsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/etShopSearch" />
+
+            <TextView
+                android:id="@+id/tvAllStores"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:drawableEnd="@drawable/ic_arrow_shops"
+                android:drawablePadding="17dp"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="17dp"
+                android:text="@string/all_stores_count"
+                android:textColor="@color/app_color"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/shopsRecyclerView" />
+
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/no_data_found"
+                android:textAlignment="center"
+                android:textColor="@color/app_color"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etShopSearch" />
+
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/green_50a"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/tvAllStores" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/v1" />
+
+            <TextView
+                android:id="@+id/tvAllProducts"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:drawableEnd="@drawable/ic_arrow_shops"
+                android:drawablePadding="17dp"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="17dp"
+                android:text="All Items (23)"
+                android:textColor="@color/app_color"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/productsRecyclerView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemShop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/llRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_item_shop_rating"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginVertical="4dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_star_white" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:layout_marginHorizontal="2dp"
+                    android:textColor="@color/white"
+                    android:textFontWeight="400"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvShopImage"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivShopImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_shop_placeholder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/lunar_green"
+                android:textFontWeight="400"
+                android:textSize="19sp"
+                app:layout_constraintStart_toEndOf="@id/cvShopImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvShopName"
+                app:layout_constraintTop_toBottomOf="@id/tvShopName">
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_nurse"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/llTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    app:layout_constraintEnd_toStartOf="@id/view2"
+                    app:layout_constraintStart_toEndOf="@id/view1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Time"
+                        android:textColor="@color/green_200"
+                        android:textFontWeight="400"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@id/view1"
+                        app:layout_constraintTop_toTopOf="@id/view1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_clock" />
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:gravity="bottom"
+                        android:textColor="@color/lunar_green"
+                        android:textFontWeight="400"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_nurse"
+                    app:layout_constraintEnd_toStartOf="@id/llDistance"
+                    app:layout_constraintStart_toEndOf="@id/llTime" />
+
+                <LinearLayout
+                    android:id="@+id/llDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    app:layout_constraintEnd_toStartOf="@id/view3"
+                    app:layout_constraintStart_toEndOf="@id/view2">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Distance"
+                        android:textColor="@color/green_200"
+                        android:textFontWeight="400"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@id/view1"
+                        app:layout_constraintTop_toTopOf="@id/view1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@+id/tvDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:gravity="bottom"
+                        android:textColor="@color/lunar_green"
+                        android:textFontWeight="400"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_nurse"
+                    app:layout_constraintEnd_toStartOf="@id/llDelivery"
+                    app:layout_constraintStart_toEndOf="@id/llDistance" />
+
+                <LinearLayout
+                    android:id="@+id/llDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Delivery"
+                        android:textColor="@color/green_200"
+                        android:textFontWeight="400"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toEndOf="@id/view1"
+                        app:layout_constraintTop_toTopOf="@id/view1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_car" />
+
+                    <TextView
+                        android:id="@+id/tvDeliveryAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:gravity="bottom"
+                        android:textColor="@color/lunar_green"
+                        android:textFontWeight="400"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

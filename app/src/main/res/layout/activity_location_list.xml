@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.home.location_list.LocationListVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background">
+
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/topbar_layout" />
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter_regular"
+            android:lineHeight="14.52dp"
+            android:text="@string/default_location"
+            android:textColor="@color/bottom_bar_unselected"
+            android:textFontWeight="400"
+            android:textSize="11sp"
+            app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+        <TextView
+            android:id="@+id/tvDefaultLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/drawable_tv_indicate_location_white"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="827 Dakota Street, Winnipeg, Canada"
+            android:textColor="@color/text_light_black"
+            android:textSize="15sp"
+            app:drawableEndCompat="@drawable/ic_location_marker_grey"
+            app:layout_constraintTop_toBottomOf="@id/t1" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@null"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/ic_cross_small"
+            android:visibility="gone"
+            app:backgroundTint="@null"
+            app:cardCornerRadius="24dp"
+            app:layout_constraintBottom_toTopOf="@id/tvDefaultLocation"
+            app:layout_constraintLeft_toLeftOf="@id/tvDefaultLocation"
+            app:layout_constraintRight_toLeftOf="@id/tvDefaultLocation"
+            app:layout_constraintTop_toTopOf="@id/tvDefaultLocation"
+            app:rippleColor="@null">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="8dp"
+                android:src="@drawable/ic_cross_small" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/inter_regular"
+            android:lineHeight="14.52dp"
+            android:text="@string/location_history"
+            android:textColor="@color/bottom_bar_unselected"
+            android:textFontWeight="400"
+            android:textSize="11sp"
+            app:layout_constraintTop_toBottomOf="@id/tvDefaultLocation" />
+
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/green_50a"
+            app:layout_constraintTop_toBottomOf="@id/t2" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/locationsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/llAddNewLocation"
+            app:layout_constraintTop_toBottomOf="@id/v1" />
+
+        <LinearLayout
+            android:id="@+id/llNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/llAddNewLocation"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v1">
+
+            <ImageView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/ic_no_location_found" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_regular"
+                android:lineHeight="15.54dp"
+                android:text="@string/no_location_history"
+                android:textColor="@color/bottom_bar_unselected"
+                android:textFontWeight="500"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@id/topBarLayout" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llAddNewLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_19sdp"
+            android:background="@drawable/bg_btn_main"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Add new location"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

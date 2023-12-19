@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.home.shop_detail.ShopDetailVM" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <ImageView
+                    android:id="@+id/shopExpandedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_shop_detail"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="-18dp"
+                    app:layout_collapseMode="pin">
+
+                    <include
+                        android:id="@+id/topBar"
+                        layout="@layout/topbar_layout" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <LinearLayout
+                    android:id="@+id/llDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topBar"
+                    app:layout_goneMarginBottom="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginStart="16dp"
+                        app:cardCornerRadius="2dp">
+
+                        <ImageView
+                            android:id="@+id/ivStoreImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/shop_image" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <LinearLayout
+                        android:id="@+id/llShopStats"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edit_text_main"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:id="@+id/llTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_clock" />
+
+                            <TextView
+                                android:id="@+id/tvTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/inter_regular"
+                                android:gravity="bottom"
+                                android:text="30 min"
+                                android:textColor="@color/lunar_green"
+                                android:textFontWeight="400"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray_nurse"
+                            app:layout_constraintEnd_toStartOf="@id/llDistance"
+                            app:layout_constraintStart_toEndOf="@id/llTime" />
+
+                        <LinearLayout
+                            android:id="@+id/llDistance"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_location" />
+
+                            <TextView
+                                android:id="@+id/tvDistance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/inter_regular"
+                                android:gravity="bottom"
+                                android:text="6.7 km"
+                                android:textColor="@color/lunar_green"
+                                android:textFontWeight="400"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/gray_nurse" />
+
+                        <LinearLayout
+                            android:id="@+id/llDelivery"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:weightSum="3"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_car" />
+
+                            <TextView
+                                android:id="@+id/tvDeliveryAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/inter_regular"
+                                android:gravity="bottom"
+                                android:text="Free"
+                                android:textColor="@color/lunar_green"
+                                android:textFontWeight="400"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRating"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/drawable_rounded_appcolor"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_marginVertical="4dp"
+                            android:backgroundTint="@color/white"
+                            android:src="@drawable/ic_star_white" />
+
+                        <TextView
+                            android:id="@+id/tvRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="4.9"
+                            android:textColor="@color/white"
+                            android:textFontWeight="400"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRatingDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/drawable_rounded_appcolor"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_star_white" />
+
+                        <TextView
+                            android:id="@+id/tvRatingTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter_regular"
+                            android:lineHeight="19.5px"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:text="@string/store_rating_by_users"
+                            android:textColor="@color/white"
+                            android:textFontWeight="400" />
+
+
+                        <ImageView
+                            android:id="@+id/ivRatingCross"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_cross_white" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tabConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/shopCategoriesTab"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/ivCategories"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabIndicator="@null"
+                    app:tabIndicatorColor="@color/app_color"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabInlineLabel="true"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/app_color"
+                    app:tabTextColor="@color/text_light_black" />
+
+                <ImageView
+                    android:id="@+id/ivCategories"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:clickable="false"
+                    android:foreground="?android:selectableItemBackgroundBorderless"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_shop_detail_categories"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/shopDetailRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_background"
+            android:clipToPadding="false"
+            android:layoutAnimation="@anim/layout_animation_down_to_up"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <View
+                android:id="@+id/v"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llNoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/v"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/ic_no_product_found" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:lineHeight="15.54dp"
+                    android:text="@string/no_product_found"
+                    android:textColor="@color/bottom_bar_unselected"
+                    android:textFontWeight="500"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/topBarLayout" />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnStraingType"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/bottom_bar_unselected"
+            android:src="@drawable/selector_fab_shops"
+            app:borderWidth="0dp"
+            app:tint="@color/white" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

@@ -1,0 +1,135 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.home.active_orders.ActiveOrderFragmentVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mapConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <include
+            android:id="@+id/constraintIndicateLocation"
+            layout="@layout/popup_indicate_location"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/constraintStartShopping"
+            layout="@layout/popup_start_shopping"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/drawable_btn_next"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:lineHeight="14.52dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="5dp"
+            android:text="Next"
+            android:textColor="#C9C0C8"
+            android:textFontWeight="500"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintStartShopping" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activeOrdersRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/riderCallConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_background"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivRiderImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/mithunda"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvYourCourier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Your courier"
+                android:textColor="@color/bottom_bar_unselected"
+                android:textFontWeight="400"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toRightOf="@id/ivRiderImage"
+                app:layout_constraintTop_toTopOf="@id/ivRiderImage" />
+
+            <TextView
+                android:id="@+id/tvRiderName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/text_light_black"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/ivRiderImage"
+                app:layout_constraintRight_toLeftOf="@id/ivMsgToRider"
+                app:layout_constraintTop_toBottomOf="@id/tvYourCourier" />
+
+            <ImageView
+                android:id="@+id/ivMsgToRider"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_chat_rider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ivCallToRider"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/ivCallToRider"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_call_rider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

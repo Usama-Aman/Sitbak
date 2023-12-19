@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detailItemConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageView
+                android:id="@+id/ivProductImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_shop_placeholder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/inter_regular"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="@color/text_light_black"
+                android:textFontWeight="400"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toRightOf="@id/ivProductImage"
+                app:layout_constraintTop_toTopOf="@id/ivProductImage" />
+
+            <TextView
+                android:id="@+id/tvProductTHC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/inter_regular"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:text="THC 17%"
+                android:textColor="@color/bottom_bar_unselected"
+                android:textFontWeight="400"
+                android:textSize="11sp"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProductShortDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/inter_regular"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="@color/text_light_black"
+                android:textFontWeight="400"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toRightOf="@id/ivProductImage"
+                app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+            <TextView
+                android:id="@+id/tvProductTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/inter_regular"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="@color/bottom_bar_unselected"
+                android:textFontWeight="400"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toRightOf="@id/ivProductImage"
+                app:layout_constraintTop_toBottomOf="@id/tvProductShortDescription" />
+
+
+            <TextView
+                android:id="@+id/tvProductQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/inter_regular"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="@color/text_light_black"
+                android:textFontWeight="400"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toRightOf="@id/ivProductImage"
+                app:layout_constraintTop_toBottomOf="@id/tvProductTags" />
+
+
+            <TextView
+                android:id="@+id/tvProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/inter_regular"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="@color/text_light_black"
+                android:textFontWeight="400"
+                android:textSize="19sp"
+                app:layout_constraintLeft_toRightOf="@id/ivProductImage"
+                app:layout_constraintTop_toBottomOf="@id/tvProductQuantity" />
+
+            <ImageView
+                android:id="@+id/ivAddProdcut"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_add_product"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

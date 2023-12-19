@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.android.sitbak.home.payment_method.PaymentMethodVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background">
+
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/topbar_layout" />
+
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter_regular"
+            android:lineHeight="20.57dp"
+            android:text="Select Card"
+            android:textAlignment="center"
+            android:textColor="@color/text_light_black"
+            android:textFontWeight="400"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ivCardView"
+            android:layout_width="184dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="60dp"
+            android:background="@null"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_cross_small"
+            android:visibility="gone"
+            app:backgroundTint="@null"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/t1">
+
+            <ImageView
+                android:id="@+id/ivSelectedCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/apple_pay" />
+
+            <ImageView
+                android:id="@+id/tick"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="end"
+                android:layout_margin="11dp"
+                android:src="@drawable/ic_green_tick"
+                app:layout_constraintRight_toRightOf="@id/ivCardView"
+                app:layout_constraintTop_toTopOf="@id/ivCardView" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvSelectedCardName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inter_regular"
+            android:lineHeight="20.57dp"
+            android:text="Apple pay"
+            android:textAlignment="center"
+            android:textColor="@color/app_color"
+            android:textFontWeight="400"
+            android:textSize="17sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/ivCardView" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/paymentMethodRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="60sp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tvSelectedCardName"
+            tools:listitem="@layout/item_payment_method" />
+
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inter_regular"
+            android:lineHeight="20.57dp"
+            android:text="By Card"
+            android:textAlignment="center"
+            android:textColor="@color/text_light_black"
+            android:textFontWeight="400"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/paymentMethodRecyclerView" />
+
+
+        <TextView
+            android:id="@+id/btnChooseCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_btn_main"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_12sdp"
+            android:text="@string/choose_card_pay"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="18dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
